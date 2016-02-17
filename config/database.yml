@@ -1,0 +1,22 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  database: commerce
+  username: root
+  password: root
+  host: 127.0.0.1
+  port: 3306
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+qa:
+  <<: *default
+
+production:
+  <<: *default
